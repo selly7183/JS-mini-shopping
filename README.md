@@ -6,7 +6,7 @@
 2. loadItems() 함수를 동적으로 fetch api를 이용하여 json파일을 불러옴.
 3. displayItems()함수를 호출하여 함수안에서 container에 innerHTML을 업데이트함.
 4. 업데이트는 받아온 items의 object를 map을 이용해서 li 문자열 배열로 변환한 다음에 join을 통해 하나의 문자열로 만들어서 innerHTML에 추가함.
-5. setEventListeners 함수를 통해 button handling event를 시켜줌.
+5. setEventListeners() 함수를 통해 button handling event를 시켜줌.
 6. logo를 누르면 displayItems(items)가 호출되게 해줌. (전체 리스트 보여줌)
 7. buttons는 이벤트 위임을 사용하여 각각의 요소에 이벤트 핸들링을 하는 것이 아니라 buttons에 이벤트를 할당해서 하나로 전체를 핸들링 할 수 있게 만듬.
 8. custom-property를 이용해서 data type과 value를 통해 filtering 할 수 있게 설정해줌.
