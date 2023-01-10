@@ -1,5 +1,5 @@
 # Mini shopping
-### Site : 
+### Site : https://selly7183.github.io/JS-mini-shopping/
 ![mini-shopping](https://user-images.githubusercontent.com/88068412/211608194-ea39822b-9465-461f-92c7-9c81a1a80b85.png)
 
 1. data/data.json 파일에 items 배열에 type, gender, size, color, image 정보를 넣어서 여러개 만들어줌.
