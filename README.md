@@ -10,6 +10,6 @@
 6. logo를 누르면 displayItems(items)가 호출되게 해줌. (전체 리스트 보여줌)
 7. buttons는 이벤트 위임을 사용하여 각각의 요소에 이벤트 핸들링을 하는 것이 아니라 buttons에 이벤트를 할당해서 하나로 전체를 핸들링 할 수 있게 만듬.
 8. custom-property를 이용해서 data type과 value를 통해 filtering 할 수 있게 설정해줌.
-9. key와 value 값이 null 일때 return 해줌.
+9. key와 value 값이 null 일때 return 해줌. (클릭했을때 undefined 나오는걸 해결)
 10. filter를 통해서 item에 해당하는 key와 value값이 같을 때만 filter되도록 해주고,
 11. updateItems()함수를 통해서 items를 forEach로 각각 눌렀을때 key와 value가 같다면 invisible로 remove, add 해줌.
