@@ -23,11 +23,41 @@ function createHTMLString(item) {
 	`;
 }
 
+// handle button click
+function onButtonClick(event, items) {
+	const target = event.target;
+	const key = target.dataset.key;
+	const value = target.dataset.value;
+
+	if (key == null || value == null) {
+		return;
+	}
+
+	const filtered = items.filter((item) => item[key] === value);
+	displayItems(filtered);
+}
+
+function updateItems(items, key, value) {
+	items.forEach((item) => {
+		if (item.dataset[key] === value) {
+			item.classList.remove("invisible");
+		} else {
+			item.classList.add("invisible");
+		}
+	});
+}
+
+function setEventListeners(items) {
+	const logo = document.querySelector(".logo");
+	const buttons = document.querySelector(".buttons");
+	logo.addEventListener("click", () => displayItems(items));
+	buttons.addEventListener("click", () => onButtonClick(event, items));
+}
+
 // Main
 loadItems()
 	.then((items) => {
-		console.log(items);
 		displayItems(items);
-		// setEventListeners(items);
+		setEventListeners(items);
 	})
 	.catch(console.log);

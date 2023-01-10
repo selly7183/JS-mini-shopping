@@ -46,7 +46,7 @@ body {
 .buttons {
 	display: flex;
 	align-items: center;
-	margin: 20px;
+	margin: 10px 20px;
 }
 .btn {
 	cursor: pointer;
@@ -77,8 +77,9 @@ body {
 
 /* items */
 .items {
-	width: 60%;
-	height: 60%;
+	max-width: 600px;
+	width: 100%;
+	height: 440px;
 	list-style: none;
 	padding-left: 0;
 	overflow-y: scroll;
@@ -89,6 +90,10 @@ body {
 	align-items: center;
 	padding: var(--base-space);
 	margin-bottom: var(--base-space);
+	padding-left: 20px;
+}
+.item.invisible {
+	display: none;
 }
 .item__thumbnail {
 	width: var(--size-thumbnail);
@@ -97,4 +102,15 @@ body {
 .item__desc {
 	margin-left: var(--base-space);
 	font-size: var(--font-size);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: palevioletred;
 }
