@@ -1,39 +1,33 @@
 "use strict";
 
-const colorBtn = document.querySelector(".color__btn");
-const detail = document.querySelectorAll(".detail");
-const clothes = document.querySelector(".clothes");
+// fetch the items from the JSON file
+function loadItems() {
+	return fetch("data/data.json")
+		.then((res) => res.json())
+		.then((json) => json.items);
+}
 
-window.addEventListener("load", () => {
-	detail.classList.add("active");
-});
+// Update the list with the given items
+function displayItems(items) {
+	const container = document.querySelector(".items");
+	container.innerHTML = items.map((item) => createHTMLString(item)).join("");
+}
 
-colorBtn.addEventListener("click", (e) => {
-	const filter = e.target.dataset.filter;
-	if (filter == null) {
-		return;
-	}
+// Create HTML list item from the given data item
+function createHTMLString(item) {
+	return `
+	<li class="item">
+		<img src="${item.image}" alt="${item.type}" class="item__thumbnail" />
+		<span class="item__desc">${item.gender}, ${item.size}</span>
+	</li>
+	`;
+}
 
-	detail.forEach((btn) => {
-		if (filter === btn.dataset.type) {
-			btn.classList.remove("active");
-		} else {
-			btn.classList.add("active");
-		}
-	});
-});
-
-clothes.addEventListener("click", (e) => {
-	const options = e.target.dataset.options;
-	if (options == null) {
-		return;
-	}
-
-	detail.forEach((btn) => {
-		if (options === btn.dataset.option) {
-			btn.classList.remove("active");
-		} else {
-			btn.classList.add("active");
-		}
-	});
-});
+// Main
+loadItems()
+	.then((items) => {
+		console.log(items);
+		displayItems(items);
+		// setEventListeners(items);
+	})
+	.catch(console.log);
