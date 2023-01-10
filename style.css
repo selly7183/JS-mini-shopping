@@ -6,6 +6,16 @@
 	--color-yellow: #fbbe28;
 	--color-pink: #fd7f84;
 	--color-light-grey: #dfdfdf;
+
+	/* size */
+	--base-space: 8px;
+	--size-button: 60px;
+	--font-size: 18px;
+	--size-border: 4px;
+	--size-thumbnail: 50px;
+
+	/* animation */
+	--animation-duration: 300ms;
 }
 
 * {
@@ -19,81 +29,72 @@ body {
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--color-black);
-}
-ul {
-	list-style: none;
-	padding: 0;
-}
-.wrap {
-	max-width: 500px;
-	width: 100%;
-	margin: 0 auto;
-	padding-top: 70px;
+	height: 100vh;
 }
 
-/* header*/
-header {
-	text-align: center;
+/* logo*/
+.logo {
+	cursor: pointer;
+	transition: transform var(--animation-duration) ease;
+}
+.logo:hover,
+.btn:hover {
+	transform: scale(1.1);
 }
 
-/* nav */
-nav {
-	margin: 5px 0 20px 0;
-}
-nav ul {
-	display: flex;
-	justify-content: space-between;
-}
-.btn {
+/* button */
+.buttons {
 	display: flex;
 	align-items: center;
+	margin: 20px;
+}
+.btn {
 	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	transition: transform var(--animation-duration) ease;
+	margin-right: var(--base-space);
 }
-.btn.clothes {
-	justify-content: space-evenly;
+.img__btn {
+	width: var(--size-button);
+	height: var(--size-button);
 }
-.btn.clothes li {
-	text-align: center;
+.color__btn {
+	font-size: var(--font-size);
+	padding: calc(var(--base-space) * 2);
+	border-radius: var(--size-border);
 }
-.btn.clothes li.active {
-	display: block;
-}
-.btn.clothes img {
-	width: 50%;
-}
-.btn.color__btn li {
-	padding: 8px 13px;
-	margin-right: 5px;
-}
-.btn li.blue {
+.color__btn.blue {
 	background-color: var(--color-blue);
 }
-.btn li.yellow {
+.color__btn.yellow {
 	background-color: var(--color-yellow);
 }
-.btn li.pink {
+.color__btn.pink {
 	background-color: var(--color-pink);
 }
 
-/*section*/
-section {
-	height: 380px;
+/* items */
+.items {
+	width: 60%;
+	height: 60%;
+	list-style: none;
+	padding-left: 0;
 	overflow-y: scroll;
 }
-.detail {
+.item {
 	background-color: var(--color-white);
 	display: flex;
 	align-items: center;
-	gap: 30px;
-	margin-bottom: 10px;
-	padding: 5px;
-	padding-left: 25px;
+	padding: var(--base-space);
+	margin-bottom: var(--base-space);
 }
-
-.detail.active {
-	display: none;
+.item__thumbnail {
+	width: var(--size-thumbnail);
+	height: var(--size-thumbnail);
 }
-
-.detail img {
-	width: 10%;
+.item__desc {
+	margin-left: var(--base-space);
+	font-size: var(--font-size);
 }

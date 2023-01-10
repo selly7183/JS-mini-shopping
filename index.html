@@ -9,88 +9,31 @@
 		<script src="src/main.js" defer></script>
 	</head>
 	<body>
-		<div class="wrap">
-			<header>
-				<img src="img/logo.png" alt="logo" />
-			</header>
-			<nav>
-				<ul>
-					<span class="btn clothes">
-						<li>
-							<img src="img/blue_t.png" alt="blue_t" data-options="t" />
-						</li>
-						<li>
-							<img src="img/blue_p.png" alt="blue_p" data-options="p" />
-						</li>
-						<li>
-							<img src="img/blue_s.png" alt="blue_s" data-options="s" />
-						</li>
-					</span>
-					<span class="btn color__btn">
-						<li class="blue" data-filter="blue">Blue</li>
-						<li class="yellow" data-filter="yellow">Yellow</li>
-						<li class="pink" data-filter="pink">Pink</li>
-					</span>
-				</ul>
-			</nav>
-			<section>
-				<ul>
-					<li class="detail" data-type="blue" data-option="t">
-						<img src="img/blue_t.png" alt="blue_t" />Female, Small Size
-					</li>
-					<li class="detail" data-type="blue" data-option="t">
-						<img src="img/blue_t.png" alt="blue_t" />Male, Large Size
-					</li>
-					<li class="detail" data-type="blue" data-option="p">
-						<img src="img/blue_p.png" alt="blue_p" />Male, Small Size
-					</li>
-					<li class="detail" data-type="blue" data-option="p">
-						<img src="img/blue_p.png" alt="blue_p" />Male, Large Size
-					</li>
-					<li class="detail" data-type="blue" data-option="s">
-						<img src="img/blue_s.png" alt="blue_s" />Female, Small Size
-					</li>
-					<li class="detail" data-type="blue" data-option="s">
-						<img src="img/blue_s.png" alt="blue_s" />Female, Large Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="t">
-						<img src="img/yellow_t.png" alt="yellow_t" />Female, Small Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="t">
-						<img src="img/yellow_t.png" alt="yellow_t" />Male, Large Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="p">
-						<img src="img/yellow_p.png" alt="yellow_p" />Female, Small Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="p">
-						<img src="img/yellow_p.png" alt="yellow_p" />Male, Large Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="s">
-						<img src="img/yellow_s.png" alt="yellow_s" />Female, Small Size
-					</li>
-					<li class="detail" data-type="yellow" data-option="s">
-						<img src="img/yellow_s.png" alt="yellow_s" />Male, Large Size
-					</li>
-					<li class="detail" data-type="pink" data-option="t">
-						<img src="img/pink_t.png" alt="pink_t" />Female, Small Size
-					</li>
-					<li class="detail" data-type="pink" data-option="t">
-						<img src="img/pink_t.png" alt="pink_t" />Male, Large Size
-					</li>
-					<li class="detail" data-type="pink" data-option="p">
-						<img src="img/pink_p.png" alt="pink_p" />Female, Small Size
-					</li>
-					<li class="detail" data-type="pink" data-option="p">
-						<img src="img/pink_p.png" alt="pink_p" />Female, Large Size
-					</li>
-					<li class="detail" data-type="pink" data-option="s">
-						<img src="img/pink_s.png" alt="pink_s" />Female, Small Size
-					</li>
-					<li class="detail" data-type="pink" data-option="s">
-						<img src="img/pink_s.png" alt="pink_s" />Female, Large Size
-					</li>
-				</ul>
-			</section>
-		</div>
+		<!--logo-->
+		<img src="img/logo.png" alt="logo" class="logo" />
+
+		<!-- button -->
+		<section class="buttons">
+			<button class="btn">
+				<img src="img/blue_t.png" alt="tshirt" class="img__btn" />
+			</button>
+			<button class="btn">
+				<img src="img/blue_p.png" alt="pants" class="img__btn" />
+			</button>
+			<button class="btn">
+				<img src="img/blue_s.png" alt="skirt" class="img__btn" />
+			</button>
+			<button class="btn color__btn blue">Blue</button>
+			<button class="btn color__btn yellow">Yellow</button>
+			<button class="btn color__btn pink">Pink</button>
+		</section>
+
+		<!-- items -->
+		<ul class="items">
+			<li class="item">
+				<img src="img/blue_t.png" alt="tshirt" class="item__thumbnail" />
+				<span class="item__desc">Male, Large</span>
+			</li>
+		</ul>
 	</body>
 </html>
